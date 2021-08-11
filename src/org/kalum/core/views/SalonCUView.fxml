@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kalum.core.controllers.SalonCUController">
+   <children>
+      <Label layoutX="25.0" layoutY="44.0" text="Salon ID" />
+      <Label layoutX="25.0" layoutY="76.0" text="Capacidad" />
+      <Label layoutX="22.0" layoutY="110.0" text="Descripcion" />
+      <Label layoutX="22.0" layoutY="147.0" text="Nombre Salon" />
+      <TextField fx:id="txtSalonId" layoutX="108.0" layoutY="40.0" />
+      <TextField fx:id="txtCapacidad" layoutX="108.0" layoutY="72.0" />
+      <TextField fx:id="txtDescripcion" layoutX="108.0" layoutY="106.0" prefHeight="25.0" prefWidth="281.0" />
+      <TextField fx:id="txtNombreSalon" layoutX="108.0" layoutY="135.0" prefHeight="25.0" prefWidth="281.0" />
+      <Button layoutX="214.0" layoutY="186.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <Button layoutX="295.0" layoutY="186.0" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="62.0" text="Guardar" />
+   </children>
+</AnchorPane>

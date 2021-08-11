@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kalum.core.controllers.HorarioController">
+   <children>
+      <TableView fx:id="tblHorario" layoutX="91.0" layoutY="30.0" prefHeight="210.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="colHorarioInicio" prefWidth="115.0" text="Horario Inicio" />
+            <TableColumn fx:id="colHorarioFinal" prefWidth="124.0" text="Horario Final" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="268.0" mnemonicParsing="false" onAction="#mostrarVentanaHorarioCU" text="Nuevo " />
+      <Button layoutX="93.0" layoutY="268.0" mnemonicParsing="false" onAction="#eliminarHorario" text="Eliminar " />
+      <Button layoutX="176.0" layoutY="268.0" mnemonicParsing="false" onAction="#mostrarVentanaHorarioUpdate" text="Modificar " />
+      <Button layoutX="270.0" layoutY="268.0" mnemonicParsing="false" text="Reporte" />
+      <Button layoutX="342.0" layoutY="268.0" mnemonicParsing="false" onAction="#mostrarMenuPrincipal" prefHeight="25.0" prefWidth="62.0" text="Salir" />
+   </children>
+</AnchorPane>

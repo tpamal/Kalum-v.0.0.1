@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteSalon" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e69e80c-d0b9-48f5-9fa4-53b34af9bdb1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_KALUM" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select salonId, capacidad, descripcion, nombreSalon from salon;]]>
+	</queryString>
+	<field name="salonId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="capacidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreSalon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="555" height="34" uuid="0a66cbec-97d1-469b-be92-43bca78220a4"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Sistema de Control Academico de Salon Kalum]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-13" width="105" height="35" uuid="12065a4e-c181-43f2-9f0d-40a6ab1d724e"/>
+				<imageExpression><![CDATA[$P{LOGO_KALUM}]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="440" y="59" width="100" height="20" uuid="801848c0-647a-4b55-8b5f-6f462e73dc5e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="222" y="56" width="136" height="20" uuid="e8d6235c-fc56-48a6-ba53-1e3a25210c32"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Guatemala, Guatemala]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="41" width="88" height="20" uuid="80cda4f7-e1e1-466d-bed7-f39b886c7ac6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Salon ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="41" width="99" height="20" uuid="d854b13e-b8f5-4b6e-ba7f-e12da2704c9b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Capacidad ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="41" width="125" height="20" uuid="bae2acbd-1966-47fc-be49-b85b2ae237a4"/>
+				<text><![CDATA[Descripcion ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="41" width="100" height="20" uuid="864fecaf-3d60-438d-a690-f86352429464"/>
+				<text><![CDATA[Nombre Salon]]></text>
+			</staticText>
+			<line>
+				<reportElement x="82" y="41" width="412" height="1" uuid="0f168bca-04aa-43d0-a098-b6e0ada4bd5f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="82" y="3" width="412" height="20" uuid="15ce655e-a999-42b0-a6df-2c07c503b5aa"/>
+			</rectangle>
+			<textField>
+				<reportElement x="82" y="3" width="88" height="20" uuid="3f82b669-9991-417d-a91c-280728bace85"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{salonId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="3" width="99" height="20" uuid="2c91f4b8-e196-4fac-a186-382f9c55c624"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{capacidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="3" width="125" height="20" uuid="76368387-26e2-420b-aabb-2786e85bcfe6"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="3" width="100" height="20" uuid="9b5f3654-1363-4ccc-89a9-1bd4c12294d2"/>
+				<textFieldExpression><![CDATA[$F{nombreSalon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="34" width="555" height="20" uuid="5fa8eaac-8c32-421f-a3f0-51d32e63a014"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="212" y="20" width="162" height="34" uuid="a76d6691-6d49-4134-bbaa-8782c8b62e5c"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

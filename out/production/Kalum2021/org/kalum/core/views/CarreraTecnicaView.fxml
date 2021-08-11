@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kalum.core.controllers.CarreraTecnicaController">
+   <children>
+      <TableView fx:id="tblCarreraTecnica" layoutX="26.0" layoutY="21.0" prefHeight="200.0" prefWidth="297.0">
+        <columns>
+          <TableColumn fx:id="colCodigoCarrera" prefWidth="124.0" text="Codigo Carrera" />
+          <TableColumn fx:id="colNombre" prefWidth="172.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="256.0" mnemonicParsing="false" onAction="#mostrarVentanaCarreraTecnicaCU" text="Nuevo" />
+      <Button layoutX="150.0" layoutY="256.0" mnemonicParsing="false" onAction="#mostrarVentanaCarreraTecnicaUpdate" text="Modificar" />
+      <Button layoutX="80.0" layoutY="256.0" mnemonicParsing="false" onAction="#eliminarCarreraTecnica" text="Eliminar" />
+      <Button layoutX="228.0" layoutY="256.0" mnemonicParsing="false" onAction="#generarReporte" text="Reporte" />
+      <Button layoutX="297.0" layoutY="256.0" mnemonicParsing="false" onAction="#mostrarMenuPrincipal" prefHeight="25.0" prefWidth="51.0" text="Salir" />
+   </children>
+</AnchorPane>

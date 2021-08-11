@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kalum.core.controllers.MainController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="27.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Usuario">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesion" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Matenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaCarreraTecnica" text="Carreras Tecnicas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaAlumnos" text="Alumnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorario" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaSalon" text="Salones" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaInstructor" text="Instructor" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaClases" text="Clases" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

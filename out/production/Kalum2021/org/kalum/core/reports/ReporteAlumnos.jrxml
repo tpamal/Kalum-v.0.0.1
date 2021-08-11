@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAlumnos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50dcb20b-f5c6-4b03-af05-e7c13a958dae">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_KALUM" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select carne, noExpediente, apellidos, nombres, email  from alumno;]]>
+	</queryString>
+	<field name="carne" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noExpediente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="572" height="27" uuid="45f57f23-7651-480b-8ec3-39ab808dd489"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Sistema de Control Academico de Alumnos Kalum]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="450" y="65" width="100" height="20" uuid="a8cf118f-ae6b-4d66-b51e-198b27459530"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="42" width="572" height="20" uuid="072c5910-ab76-4f0f-ad72-ddd83e67a626"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Guatemala, Guatemala]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-9" y="-3" width="93" height="43" uuid="8ee55de2-6440-45b4-8861-a4d408c6cc49"/>
+				<imageExpression><![CDATA[$P{LOGO_KALUM}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="84" height="20" uuid="bdb14b0d-9ee4-466f-b101-04f3f1c5e4ce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CARNE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="13" width="100" height="20" uuid="e1bd96ff-fd69-447b-bc35-24334cecd4ce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EXPEDIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="13" width="116" height="20" uuid="82125206-2176-448e-9ca9-35a81a4d4317"/>
+				<text><![CDATA[APELLIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="13" width="134" height="20" uuid="1be7bfd8-0c39-4e10-9c2b-d3a61b29d916"/>
+				<text><![CDATA[NOMBRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="13" width="138" height="20" uuid="c276473b-f3af-4e0b-9814-9d3e8d02396f"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="12" width="572" height="1" uuid="1c391046-e7aa-4793-8822-4f1e93b25649"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="0" width="572" height="20" uuid="d835f266-7658-4786-acf7-f1c19998032a"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="84" height="20" uuid="02d09662-7783-4930-b5e9-dde1d962fc51"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{carne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="100" height="20" uuid="3a4c14d6-0f19-4461-a14c-3aae2e41964e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{noExpediente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="116" height="20" uuid="29ba3108-54a3-4c2a-a59f-eb84d9ba1036"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="134" height="20" uuid="9d3588b0-8e27-4813-8c3b-4b5a83193ffa"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="138" height="20" uuid="f9f5c39d-18c9-414f-9742-36413a4180df"/>
+				<textElement textAlignment="Justified">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="24" width="572" height="30" uuid="d1e539f1-5053-465d-939d-01123267d08b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="243" y="17" width="118" height="37" uuid="0521e5d7-1d8c-4cf4-89a3-18eb9ce31341"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

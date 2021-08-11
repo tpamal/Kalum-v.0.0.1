@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCarreraTecnica" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92243d68-a46c-43b8-bc0a-a660084e35b7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_KALUM" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select codigoCarrera, nombre from carreraTecnica]]>
+	</queryString>
+	<field name="codigoCarrera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="26" width="555" height="33" uuid="2473b26d-f479-432d-9d0d-7c8fb2878738"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Sistema de Control Academico de Carreras Tecnicas Kalum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="59" width="153" height="20" uuid="2b2708fc-e3bc-41d6-9f9f-af12a912428f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Guatemala, Guatemala]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="442" y="59" width="100" height="20" uuid="d26afd16-e019-44f7-b40c-1483053f8d84"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="-16" width="106" height="42" uuid="4b84ed46-af6c-4759-bf02-35c6eb0d5651"/>
+				<imageExpression><![CDATA[$P{LOGO_KALUM}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="41" width="137" height="20" uuid="a028a677-10cd-4776-9a7a-63327d38d92b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo De Carrera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="41" width="143" height="20" uuid="e9098a37-2963-4c6f-8ea4-6463f857677d"/>
+				<text><![CDATA[Nombre De Carrera]]></text>
+			</staticText>
+			<line>
+				<reportElement x="143" y="41" width="280" height="1" uuid="019c80cf-cc62-4850-aaee-25a62919c3fa"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="143" y="0" width="280" height="20" uuid="eb195cdc-d377-4e87-8b44-69e111d5f36d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="143" y="0" width="137" height="20" uuid="fd54d569-0062-444a-be65-116357813621"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCarrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="143" height="20" uuid="046a494a-45ad-463a-b6c4-d8d3f923aa92"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20" uuid="f69d3a1e-3b4a-4cbd-a0a0-1a345b1c99fb"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="187" y="0" width="178" height="32" uuid="e10ecffe-4706-44b8-be63-489c9cebe2e2"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
